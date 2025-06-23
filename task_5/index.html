@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Even Numbers Sum</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="calculateSum()">Click me</button>
+  <p id="result"></p>
+
+  <script>
+    function calculateSum() {
+      let sum = 0;
+      for (let i = 0; i <= 100; i++) {
+        if (i % 2 === 0) {
+          sum += i;
+        }
+      }
+      document.getElementById("result").textContent =
+        "Sum of even numbers from 0 to 100 is: " + sum;
+    }
+  </script>
+
+</body>
+</html>
